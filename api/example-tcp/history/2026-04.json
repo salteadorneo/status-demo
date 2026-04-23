@@ -1,0 +1,9 @@
+[
+  {
+    "timestamp": "2026-04-23T13:09:49.614Z",
+    "status": "down",
+    "statusCode": null,
+    "responseTime": 26,
+    "error": "getaddrinfo ENOTFOUND db.example.com"
+  }
+]

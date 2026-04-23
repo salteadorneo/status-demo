@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <title>Example TCP - Estado</title>
+  <link rel="stylesheet" href="../src/global.css" />
+</head>
+<body>
+
+      <header>
+        <h1 class="title"><a href="../index.html">My Status Page</a></h1>
+        <nav><a href="https://github.com/salteadorneo/status/issues/new" target="_blank" rel="noopener">Reportar un problema</a></nav>
+      </header>
+      <main>
+        <div class="service-header">
+          <h2 style="view-transition-name:example-tcp">
+             <span class="down">●</span>
+             Example TCP
+          </h2>
+          <p>
+            <span class="method-badge tcp">TCP</span>
+            <span style="opacity: 0.8;">db.example.com:5432</span>
+            <button class="copy-button" onclick="copyToClipboard('db.example.com:5432')"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-copy"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></button>
+          </p>
+        </div>
+        
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="label">Uptime</div>
+            <div class="value">0.00%</div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="label">Tiempo de respuesta promedio</div>
+            <div class="value">26ms</div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="label">Incidentes</div>
+            <div class="value">1</div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="label">Última verificación</div>
+            <div class="value">23 abr 2026, 13:09</div>
+          </div>
+        </div>
+        
+        <p style="opacity: 0.7; font-size: 0.9rem;">Último incidente: 23 abr 2026, 13:09</p>
+        
+        
+        <div class="history-header">
+          <h2>Historial</h2>
+          <div class="history-filters">
+            <button class="filter-btn" data-period="24h" aria-pressed="false">24h</button>
+            <button class="filter-btn active" data-period="72h" aria-pressed="false">72h</button>
+            <button class="filter-btn" data-period="30d" aria-pressed="false">30d</button>
+            <button class="filter-btn" data-period="60d" aria-pressed="true">60d</button>
+          </div>
+        </div>
+        <div class="history-container" style="view-transition-name:example-tcp-history">
+        <div style="display: none;"><div class="history" data-period="24h"><div class="history-day " title="14h"></div><div class="history-day " title="15h"></div><div class="history-day " title="16h"></div><div class="history-day " title="17h"></div><div class="history-day " title="18h"></div><div class="history-day " title="19h"></div><div class="history-day " title="20h"></div><div class="history-day " title="21h"></div><div class="history-day " title="22h"></div><div class="history-day " title="23h"></div><div class="history-day " title="00h"></div><div class="history-day " title="01h"></div><div class="history-day " title="02h"></div><div class="history-day " title="03h"></div><div class="history-day " title="04h"></div><div class="history-day " title="05h"></div><div class="history-day " title="06h"></div><div class="history-day " title="07h"></div><div class="history-day " title="08h"></div><div class="history-day " title="09h"></div><div class="history-day " title="10h"></div><div class="history-day " title="11h"></div><div class="history-day " title="12h"></div><div class="history-day down" title="13h 0% uptime (1 checks)"></div></div></div>
+        <div><div class="history" data-period="72h"><div class="history-day " title="14h"></div><div class="history-day " title="15h"></div><div class="history-day " title="16h"></div><div class="history-day " title="17h"></div><div class="history-day " title="18h"></div><div class="history-day " title="19h"></div><div class="history-day " title="20h"></div><div class="history-day " title="21h"></div><div class="history-day " title="22h"></div><div class="history-day " title="23h"></div><div class="history-day " title="00h"></div><div class="history-day " title="01h"></div><div class="history-day " title="02h"></div><div class="history-day " title="03h"></div><div class="history-day " title="04h"></div><div class="history-day " title="05h"></div><div class="history-day " title="06h"></div><div class="history-day " title="07h"></div><div class="history-day " title="08h"></div><div class="history-day " title="09h"></div><div class="history-day " title="10h"></div><div class="history-day " title="11h"></div><div class="history-day " title="12h"></div><div class="history-day " title="13h"></div><div class="history-day " title="14h"></div><div class="history-day " title="15h"></div><div class="history-day " title="16h"></div><div class="history-day " title="17h"></div><div class="history-day " title="18h"></div><div class="history-day " title="19h"></div><div class="history-day " title="20h"></div><div class="history-day " title="21h"></div><div class="history-day " title="22h"></div><div class="history-day " title="23h"></div><div class="history-day " title="00h"></div><div class="history-day " title="01h"></div><div class="history-day " title="02h"></div><div class="history-day " title="03h"></div><div class="history-day " title="04h"></div><div class="history-day " title="05h"></div><div class="history-day " title="06h"></div><div class="history-day " title="07h"></div><div class="history-day " title="08h"></div><div class="history-day " title="09h"></div><div class="history-day " title="10h"></div><div class="history-day " title="11h"></div><div class="history-day " title="12h"></div><div class="history-day " title="13h"></div><div class="history-day " title="14h"></div><div class="history-day " title="15h"></div><div class="history-day " title="16h"></div><div class="history-day " title="17h"></div><div class="history-day " title="18h"></div><div class="history-day " title="19h"></div><div class="history-day " title="20h"></div><div class="history-day " title="21h"></div><div class="history-day " title="22h"></div><div class="history-day " title="23h"></div><div class="history-day " title="00h"></div><div class="history-day " title="01h"></div><div class="history-day " title="02h"></div><div class="history-day " title="03h"></div><div class="history-day " title="04h"></div><div class="history-day " title="05h"></div><div class="history-day " title="06h"></div><div class="history-day " title="07h"></div><div class="history-day " title="08h"></div><div class="history-day " title="09h"></div><div class="history-day " title="10h"></div><div class="history-day " title="11h"></div><div class="history-day " title="12h"></div><div class="history-day down" title="13h 0% uptime (1 checks)"></div></div></div>
+        <div style="display: none;"><div class="history" data-period="30d"><div class="history-day " title="2026-03-25"></div><div class="history-day " title="2026-03-26"></div><div class="history-day " title="2026-03-27"></div><div class="history-day " title="2026-03-28"></div><div class="history-day " title="2026-03-29"></div><div class="history-day " title="2026-03-30"></div><div class="history-day " title="2026-03-31"></div><div class="history-day " title="2026-04-01"></div><div class="history-day " title="2026-04-02"></div><div class="history-day " title="2026-04-03"></div><div class="history-day " title="2026-04-04"></div><div class="history-day " title="2026-04-05"></div><div class="history-day " title="2026-04-06"></div><div class="history-day " title="2026-04-07"></div><div class="history-day " title="2026-04-08"></div><div class="history-day " title="2026-04-09"></div><div class="history-day " title="2026-04-10"></div><div class="history-day " title="2026-04-11"></div><div class="history-day " title="2026-04-12"></div><div class="history-day " title="2026-04-13"></div><div class="history-day " title="2026-04-14"></div><div class="history-day " title="2026-04-15"></div><div class="history-day " title="2026-04-16"></div><div class="history-day " title="2026-04-17"></div><div class="history-day " title="2026-04-18"></div><div class="history-day " title="2026-04-19"></div><div class="history-day " title="2026-04-20"></div><div class="history-day " title="2026-04-21"></div><div class="history-day " title="2026-04-22"></div><div class="history-day down" title="2026-04-23 0% uptime (1 checks)"></div></div></div>
+        <div style="display: none;"><div class="history" data-period="60d"><div class="history-day " title="2026-02-23"></div><div class="history-day " title="2026-02-24"></div><div class="history-day " title="2026-02-25"></div><div class="history-day " title="2026-02-26"></div><div class="history-day " title="2026-02-27"></div><div class="history-day " title="2026-02-28"></div><div class="history-day " title="2026-03-01"></div><div class="history-day " title="2026-03-02"></div><div class="history-day " title="2026-03-03"></div><div class="history-day " title="2026-03-04"></div><div class="history-day " title="2026-03-05"></div><div class="history-day " title="2026-03-06"></div><div class="history-day " title="2026-03-07"></div><div class="history-day " title="2026-03-08"></div><div class="history-day " title="2026-03-09"></div><div class="history-day " title="2026-03-10"></div><div class="history-day " title="2026-03-11"></div><div class="history-day " title="2026-03-12"></div><div class="history-day " title="2026-03-13"></div><div class="history-day " title="2026-03-14"></div><div class="history-day " title="2026-03-15"></div><div class="history-day " title="2026-03-16"></div><div class="history-day " title="2026-03-17"></div><div class="history-day " title="2026-03-18"></div><div class="history-day " title="2026-03-19"></div><div class="history-day " title="2026-03-20"></div><div class="history-day " title="2026-03-21"></div><div class="history-day " title="2026-03-22"></div><div class="history-day " title="2026-03-23"></div><div class="history-day " title="2026-03-24"></div><div class="history-day " title="2026-03-25"></div><div class="history-day " title="2026-03-26"></div><div class="history-day " title="2026-03-27"></div><div class="history-day " title="2026-03-28"></div><div class="history-day " title="2026-03-29"></div><div class="history-day " title="2026-03-30"></div><div class="history-day " title="2026-03-31"></div><div class="history-day " title="2026-04-01"></div><div class="history-day " title="2026-04-02"></div><div class="history-day " title="2026-04-03"></div><div class="history-day " title="2026-04-04"></div><div class="history-day " title="2026-04-05"></div><div class="history-day " title="2026-04-06"></div><div class="history-day " title="2026-04-07"></div><div class="history-day " title="2026-04-08"></div><div class="history-day " title="2026-04-09"></div><div class="history-day " title="2026-04-10"></div><div class="history-day " title="2026-04-11"></div><div class="history-day " title="2026-04-12"></div><div class="history-day " title="2026-04-13"></div><div class="history-day " title="2026-04-14"></div><div class="history-day " title="2026-04-15"></div><div class="history-day " title="2026-04-16"></div><div class="history-day " title="2026-04-17"></div><div class="history-day " title="2026-04-18"></div><div class="history-day " title="2026-04-19"></div><div class="history-day " title="2026-04-20"></div><div class="history-day " title="2026-04-21"></div><div class="history-day " title="2026-04-22"></div><div class="history-day down" title="2026-04-23 0% uptime (1 checks)"></div></div></div>
+        </div>
+        
+        
+        
+        <details open>
+          <summary>Últimas verificaciones</summary>
+          <table>
+            <thead><tr><th>Fecha</th><th>Estado</th><th>Tiempo</th><th>Error</th></tr></thead>
+            <tbody><tr><td>23 abr 2026, 13:09</td><td class="down">●</td><td>26ms</td><td>getaddrinfo ENOTFOUND db.example.com</td></tr></tbody>
+          </table>
+        </details>
+        
+        <details open>
+          <summary>API</summary>
+          <div class="api-endpoints">
+            <div class="api-endpoint">
+              <div class="endpoint-header">
+                <span class="method-badge">GET</span>
+                https://salteadorneo.github.io/status/api/example-tcp/status.json
+                <button class="copy-button" onclick="copyToClipboard('https://salteadorneo.github.io/status/api/example-tcp/status.json')"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-copy"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></button>
+              </div>
+              <p class="endpoint-description">Devuelve el estado actual de este servicio.</p>
+            </div>
+            <div class="api-endpoint">
+              <div class="endpoint-header">
+                <span class="method-badge">GET</span>
+                https://salteadorneo.github.io/status/api/example-tcp/history/YYYY-MM.json
+                <button class="copy-button" onclick="copyToClipboard('https://salteadorneo.github.io/status/api/example-tcp/history/YYYY-MM.json')"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-copy"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></button>
+              </div>
+              <p class="endpoint-description">Devuelve todas las comprobaciones de un mes específico.</p>
+            </div>
+          </div>
+        </details>
+        
+        <details open>
+          <summary>Badge</summary>
+          <p>Usa este badge para mostrar el estado en otras páginas:</p>
+          <div class="badge-container">
+            <img src="../badge/example-tcp.svg" alt="Example TCP status" />
+            <div class="badge-code-wrapper">
+              <div class="badge-code">
+                <p>![Example TCP](https://salteadorneo.github.io/status/badge/example-tcp.svg)</p>
+                <button class="copy-button" onclick="copyToClipboard('![Example TCP](https://salteadorneo.github.io/status/badge/example-tcp.svg)')"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-copy"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg></button>
+              </div>
+            </div>
+          </div>
+        </details>
+      </main>
+    
+<footer>
+  <a href="https://github.com/salteadorneo/status" target="_blank" rel="noopener">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    salteadorneo/status
+  </a>&nbsp;v1.0.6
+  &nbsp;·&nbsp;<a href="https://github.com/salteadorneo/status/issues/new" target="_blank" rel="noopener">Reportar un problema</a>
+</footer>
+<script src="../src/main.js"></script>
+</body>
+</html>
