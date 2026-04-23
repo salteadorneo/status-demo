@@ -82,5 +82,12 @@
     "statusCode": 200,
     "responseTime": 225,
     "error": null
+  },
+  {
+    "timestamp": "2026-04-23T21:48:27.191Z",
+    "status": "up",
+    "statusCode": 200,
+    "responseTime": 295,
+    "error": null
   }
 ]
