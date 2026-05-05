@@ -950,5 +950,12 @@
     "statusCode": 404,
     "responseTime": 28,
     "error": null
+  },
+  {
+    "timestamp": "2026-05-05T09:44:12.533Z",
+    "status": "down",
+    "statusCode": 404,
+    "responseTime": 32,
+    "error": null
   }
 ]
